@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating(nameof(Spawn), 1, 1f);
+        InvokeRepeating(nameof(Spawn), 1, 1f); // Repeatly calls Spawn() start at 1 second and repeat every 1f
     }
 
     void Spawn()
