@@ -180,4 +180,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e4e1e60ad4a347a2b49edebbd4321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
-  attackPoint: 5
+  attackPoint: 20

@@ -11,11 +11,12 @@ public class WaveSpawnManager : MonoBehaviour
     void Start()
     {
         waveController.ChangeWave(waveConfigs[0]);
+        waveEndTime = Time.time + waveConfigs[currentWaveIndex].waveInterval;
     }
 
     void Update()
     {
-        if (waveController.IsCompleted())
+        if (waveController.IsCompleted() && Time.time >= waveEndTime)
         {
             currentWaveIndex++;
             if (currentWaveIndex < waveConfigs.Length)

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    public int attackPoint = 5;
+    public int attackPoint = 20;
 
     void OnTriggerEnter(Collider other)
     {
