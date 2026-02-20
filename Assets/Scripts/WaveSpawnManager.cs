@@ -11,6 +11,7 @@ public class WaveSpawnManager : MonoBehaviour
     void Start()
     {
         waveController.ChangeWave(waveConfigs[0]);
+        Debug.Log($"Start Wave: {currentWaveIndex + 1}");
         waveEndTime = Time.time + waveConfigs[currentWaveIndex].waveInterval;
     }
 
@@ -22,6 +23,8 @@ public class WaveSpawnManager : MonoBehaviour
             if (currentWaveIndex < waveConfigs.Length)
             {
                 waveController.ChangeWave(waveConfigs[currentWaveIndex]);
+                waveEndTime = Time.deltaTime + waveConfigs[currentWaveIndex].waveInterval;
+                Debug.Log($"Start Wave: {currentWaveIndex + 1}");
             }
             else
             {
